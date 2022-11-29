@@ -1,0 +1,77 @@
+
+body {
+    background-color: rgba(0, 0, 0, 0.487);
+ /*    background-image: linear-gradient(rgba(255, 0, 0, 0.093), black, rgba(0, 0, 255, 0.175)); */   
+}
+.container {  
+    width: 50%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.image {
+    display: none;
+}
+
+#prev {
+    position: absolute;
+    background-color: black;
+    color: white;
+    top: 45%;
+    left: 0;
+    cursor: pointer;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: .0.7 ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+
+#next {
+    position: absolute;
+    background-color: black;
+    color: white;
+    top: 45%;
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: .0.7 ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: rgba(0, 0, 0, 0.226);
+    display: inline-block;
+  border-radius: 50%;
+  margin: 0 2px;
+  transition: background-color 0.6 ease-in-out;
+}
+
+.active {
+    background-color: black;
+}
+
+.fade {
+    animation: fade 1/5s;
+}
+@keyframes fade {
+    from {opacity: .6;}
+    to {opacity: .1;}
+}
+
+@media (max-width: 769px) {
+    .container {
+        width: 100%;
+    }
+}
